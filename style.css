@@ -16,7 +16,12 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: rgb(70, 70, 70);
+}
+
+.cube {
+    border-radius: 50%;
+    box-shadow: 30px 30px 1024px rgba(168, 84, 151, 0.8);
 }
 
 /* TRANSITION */
@@ -206,6 +211,23 @@ section {
     gap: 1rem;
 }
 
+.education-link {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.education-link:hover {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.section__pic-container {
+    border-radius: 50%;
+    box-shadow: 30px 30px 1024px rgba(168, 84, 151, 0.8);
+}
+
 /* ICONS */
 
 .icon {
@@ -259,6 +281,11 @@ section {
 
 .btn-container {
     gap: 1rem;
+}
+
+.theme-toggle-btn {
+    width: 50px;
+    height: 50px;
 }
 
 /* ABOUT SECTION */

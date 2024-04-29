@@ -7,21 +7,23 @@
     <title>Said Gadzhiev</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="mediaqueries.css"/>
+    <link id="dark-style" rel="stylesheet" href="dark-style.css" disabled>
 </head>
-<body>
+<body class="theme">
 <nav id="desktop-nav">
-    <div class="logo">Said Gadzhiev</div>
+    <div class="logo"><b>Said Gadzhiev</b></div>
     <div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a id="theme-toggle-btn"><img class="theme-toggle-btn" src="./assets/theme-light.png" alt="Toggle Light Theme"></a></li>
         </ul>
     </div>
 </nav>
 <nav id="hamburger-nav">
-    <div class="logo">Said Gadzhiev</div>
+    <div class="logo"><b>Said Gadzhiev</b></div>
     <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
@@ -34,16 +36,17 @@
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a id="theme-toggle-hamburger-btn"><img class="theme-toggle-btn" src="./assets/theme-light.png" alt="Toggle Light Theme"></a></li>
             </ul>
         </div>
     </div>
 </nav>
 <section id="profile">
     <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="Said Gadzhiev profile picture" />
+        <img class="cube" src="./assets/giphy.gif" alt="Cube picture" />
     </div>
     <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1">Hi, I'm</p>
         <h1 class="title">Said Gadzhiev</h1>
         <p class="section__text__p2">Backend Developer</p>
         <div class="btn-container">
@@ -72,7 +75,7 @@
     <div class="section-container">
         <div class="section__pic-container">
             <img
-                    src="./assets/about-pic.png"
+                    src="./assets/profile-pic.png"
                     alt="Profile picture"
                     class="about-pic"
             />
@@ -95,11 +98,11 @@
                             class="icon"
                     />
                     <h3>Education</h3>
-                    <p>ITMO University<br />Software Engineering Bachelors Degree<br />2022 — 2026</p>
+                    <a class="education-link" href="https://itmo.ru/">ITMO University<br />Software Engineering Bachelors Degree<br />2022 — 2026</a>
                 </div>
             </div>
             <div class="text-container">
-                <p>
+                <p class="theme">
                     Something very important should be here...
                 </p>
             </div>
