@@ -102,11 +102,12 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
+    background-image: linear-gradient(to bottom, #fff6fe, #bfbfbf);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     transition: all 0.3ms ease-in-out;
+    border-radius: 40px;
 }
 
 .menu-links a {

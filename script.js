@@ -10,6 +10,7 @@ const socialsContainer = document.getElementById('socials-container');
 const themeToggleHamburgerBtn = document.getElementById('theme-toggle-hamburger-btn');
 
 themeToggleBtn.addEventListener('click', toggleDarkTheme);
+themeToggleHamburgerBtn.addEventListener('click', toggleDarkTheme);
 
 function toggleDarkTheme() {
     const darkStyle = document.getElementById('dark-style');
@@ -40,6 +41,7 @@ function updateSocialsIcons(githubIcon, telegramIcon) {
 }
 
 function updateThemeToggleIcons(themeIcon) {
-    themeToggleBtn.innerHTML = `<img src="./assets/${themeIcon}" alt="Toggle Dark Theme">`;
-    themeToggleHamburgerBtn.innerHTML = `<img class="theme-toggle-btn" src="./assets/${themeIcon}" alt="Toggle Light Theme">`;
+    const themeIconImg = `<img src="./assets/${themeIcon}" alt="Toggle Light Theme">`;
+    themeToggleBtn.innerHTML = themeIconImg;
+    themeToggleHamburgerBtn.innerHTML = themeIconImg;
 }
