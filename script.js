@@ -45,3 +45,22 @@ function updateThemeToggleIcons(themeIcon) {
     themeToggleBtn.innerHTML = themeIconImg;
     themeToggleHamburgerBtn.innerHTML = themeIconImg;
 }
+
+// скорость загрузки
+(function() {
+    function calculateLoadTime(startTime) {
+        const endTime = performance.now();
+        const loadTime = endTime - startTime;
+        return loadTime.toFixed(2);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const startTime = performance.timing.navigationStart;
+        const loadTime = calculateLoadTime(startTime);
+
+        const loadingTimeElement = document.getElementById('loading-time');
+        if (loadingTimeElement) {
+            loadingTimeElement.textContent = `Время загрузки страницы: ${loadTime} мс`;
+        }
+    });
+})();
