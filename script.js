@@ -48,19 +48,17 @@ function updateThemeToggleIcons(themeIcon) {
 
 // скорость загрузки
 (function() {
-    function calculateLoadTime(startTime) {
-        const endTime = performance.now();
-        const loadTime = endTime - startTime;
+    function calculateLoadTime() {
+        const loadTime = performance.now();
         return loadTime.toFixed(2);
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        const startTime = performance.timing.navigationStart;
-        const loadTime = calculateLoadTime(startTime);
+        const loadTime = calculateLoadTime();
 
         const loadingTimeElement = document.getElementById('loading-time');
         if (loadingTimeElement) {
-            loadingTimeElement.textContent = `Время загрузки страницы: ${loadTime} мс`;
+            loadingTimeElement.textContent = `Page load time: ${loadTime}ms`;
         }
     });
 })();
