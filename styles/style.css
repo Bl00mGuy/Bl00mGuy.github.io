@@ -345,6 +345,7 @@ section {
 
 #experience {
     position: relative;
+    margin-bottom: 26rem;
 }
 
 .experience-sub-title {
@@ -378,6 +379,50 @@ article {
 
 article .icon {
     cursor: default;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+}
+
+.skills-table th, .skills-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.skills-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.skills-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.skills-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .skills-table {
+        display: block;
+        width: 100%;
+    }
+
+    .skills-table thead, .skills-table tbody, .skills-table th, .skills-table td, .skills-table tr {
+        display: block;
+    }
+
+    .skills-table th, .skills-table td {
+        padding: 0.5rem;
+    }
+
+    .skills-table tr {
+        margin-bottom: 0.8rem;
+    }
 }
 
 /* PROJECTS SECTION */
