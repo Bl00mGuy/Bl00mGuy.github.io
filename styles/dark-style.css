@@ -2,8 +2,8 @@ body {
     background-color: black;
 }
 
-.cube {
-    box-shadow: 30px 30px 1024px rgba(255, 136, 0, 0.8);
+.section__pic-container {
+    box-shadow: 30px 30px 1024px rgba(130, 130, 130, 0.8);
 }
 
 .theme {
@@ -46,4 +46,8 @@ body {
 
 .about-containers {
     color: black;
+}
+
+.hamburger-icon span {
+    background-color: white;
 }

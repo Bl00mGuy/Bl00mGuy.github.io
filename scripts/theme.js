@@ -11,10 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
             darkStyle.disabled = false;
             updateSocialsIcons('github-dark.png', 'telegram-dark.png');
             updateThemeToggleIcons('theme-dark.png');
+            updateArrowIcons('arrow-dark.png');
         } else {
             darkStyle.disabled = true;
             updateSocialsIcons('github.png', 'telegram.png');
             updateThemeToggleIcons('theme-light.png');
+            updateArrowIcons('arrow.png');
         }
     }
 
@@ -23,16 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const telegramIconElement = socialsContainer.querySelector('[alt="My Telegram profile"]');
 
         if (githubIconElement) {
-            githubIconElement.src = `./assets/${githubIcon}`;
+            githubIconElement.src = `../assets/${githubIcon}`;
         }
 
         if (telegramIconElement) {
-            telegramIconElement.src = `./assets/${telegramIcon}`;
+            telegramIconElement.src = `../assets/${telegramIcon}`;
         }
     }
 
+    function updateArrowIcons(themeIcon) {
+        const arrowElements = document.querySelectorAll('.arrow');
+        arrowElements.forEach(arrow => {
+            arrow.src = `./assets/${themeIcon}`;
+        });
+    }
+
     function updateThemeToggleIcons(themeIcon) {
-        const themeIconImg = `<img src="./assets/${themeIcon}" alt="Toggle Light Theme">`;
+        const themeIconImg = `<img src="../assets/${themeIcon}" alt="Toggle Light Theme">`;
         themeToggleBtn.innerHTML = themeIconImg;
         themeToggleHamburgerBtn.innerHTML = themeIconImg;
     }
