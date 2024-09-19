@@ -1,28 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const todoContainer = document.getElementById('todo-container');
-    const preloader = document.getElementById('todo-preloader');
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    let filterId = Math.random() > 0.5 ? 100 : 200;
+    const url = `https://jsonplaceholder.typicode.com/comments?id_gte=${filterId}`;
 
     preloader.style.display = 'block';
 
-    fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
+    fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Network error');
             }
             return response.json();
         })
         .then(data => {
             preloader.style.display = 'none';
+            content.style.display = 'block';
 
-            todoContainer.innerHTML = data.map(todo => `
-                <div class="todo-item">
-                    <h3>${todo.title}</h3>
-                    <p>${todo.completed ? 'Completed' : 'Pending'}</p>
-                </div>
-            `).join('');
+            renderData(content, data);
         })
         .catch(error => {
             preloader.style.display = 'none';
-            todoContainer.innerHTML = `<p>⚠ Что-то пошло не так: ${error.message}</p>`;
+            content.style.display = 'block';
+            content.innerHTML = `<p class="error-message">⚠ Something went wrong: ${error.message}</p>`;
         });
 });
+
+function renderData(container, data) {
+    const list = document.createElement('ul');
+    data.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name} (${item.email}): ${item.body}`;
+        list.appendChild(listItem);
+    });
+    container.appendChild(list);
+}

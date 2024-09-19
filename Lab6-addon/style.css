@@ -1,0 +1,12 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
