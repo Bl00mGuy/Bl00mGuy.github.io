@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         autoplay: {
             delay: 5000,
-        }
+        },
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 30
     });
 });
