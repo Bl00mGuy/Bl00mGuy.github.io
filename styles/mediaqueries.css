@@ -101,3 +101,22 @@
         text-align: justify;
     }
 }
+
+@media (max-width: 768px) {
+    .skills-table {
+        display: block;
+        width: 100%;
+    }
+
+    .skills-table thead, .skills-table tbody, .skills-table th, .skills-table td, .skills-table tr {
+        display: block;
+    }
+
+    .skills-table th, .skills-table td {
+        padding: 0.5rem;
+    }
+
+    .skills-table tr {
+        margin-bottom: 0.8rem;
+    }
+}
